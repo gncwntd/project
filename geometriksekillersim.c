@@ -55,6 +55,6 @@ int main()
     else if(sayi==2)
         printf("LUTFEN KENAR VE ACILARI GIRINIZ: ");
 
-
+// Slm//
 return 0;
 }
