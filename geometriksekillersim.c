@@ -20,10 +20,10 @@ int main()
         printf("Birinci Kenar:\n",x);
         scanf("%f",&x);
 
-        printf("ikinci kenar:\n",y);
+        printf("Ikinci kenar:\n",y);
         scanf("%f",&y);
 
-        printf("ucuncu kenar:\n",z);
+        printf("Ucuncu kenar:\n",z);
         scanf("%f",&z);
 
         printf("1.Aci:\n",k);
@@ -102,13 +102,15 @@ int main()
     else if(sayi==3)  //COKGEN
     {
         printf("LUTFEN KENAR VE ACILARI GIRINIZ:\n ");
+
     }
 
     else if(sayi==4)
     {
         printf("Lutfen Yaricapi Giriniz:");
         scanf("%f",&r);
-        printf("Dairenin Alan:%.2f",2*PI*r);
+        printf("Dairenin Alani:%.2f\n",PI*r*r);
+        printf("Dairenin Cevresi:%.2f",2*PI*r);
     }
 
     else if(sayi==5)
@@ -123,5 +125,6 @@ int main()
 
 return 0;
 }
+
 
 
