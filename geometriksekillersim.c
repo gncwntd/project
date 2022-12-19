@@ -2,6 +2,25 @@
 #include <math.h>
 #define PI 3.14
 //   (((x+y+z)/2)*(((x+y+z)/2)-x)*(((x+y+z)/2)-y)*(((x+y+z)/2)-z))*
+void kenarsayisi()
+{
+    int a;
+    printf("Lutfen Kenarlari Giriniz:");
+    scanf("%d",&a);
+    printf("1. kenar %d\n",a);
+    int i=2;
+    int ct = 0;
+    while(a != -1)
+    {
+
+        scanf("%d",&a);
+        printf("%d . kenar %d\n",i,a);
+        i++;
+        ct++;
+
+    }
+    printf("Bu bir %d'gendir",ct);
+}
 
 int main()
 {
@@ -86,6 +105,10 @@ int main()
             printf("Sekliniz Eskenar Dortgen!\n");
             printf("Alani:%f",((q1*q2*sin(w1))/2)+((q3*q4*sin(w3))/2));}
 
+        else if (((q1 != q2) & (q3 != q4)) &((q1==q3)&(q2==q4)) & (w1==90&w2==90&w3==90&w4==90)) {
+            printf("Sekliniz Dikdortgen!\n");
+            printf("Alani:%f",q1*q2);}
+
         else if ((q1 == q2 == q3 == q4) & (w1==90&w2==90&w3==90&w4==90)) {
             printf("Sekliniz Kare!\n");
             printf("Alani:%f",q1*q2);}
@@ -101,16 +124,16 @@ int main()
 
     else if(sayi==3)  //COKGEN
     {
-        printf("LUTFEN KENAR VE ACILARI GIRINIZ:\n ");
-
+        kenarsayisi();
     }
 
     else if(sayi==4)
     {
         printf("Lutfen Yaricapi Giriniz:");
         scanf("%f",&r);
+        printf("Dairenin Cevresi:%.2f\n",2*PI*r);
         printf("Dairenin Alani:%.2f\n",PI*r*r);
-        printf("Dairenin Cevresi:%.2f",2*PI*r);
+
     }
 
     else if(sayi==5)
