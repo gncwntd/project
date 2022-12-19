@@ -113,6 +113,9 @@ int main()
 
     else if(sayi==5)
         printf("Yine Bekleriz!");
+    
+    else
+        printf("Gecersiz Islem! Lutfen Tekrar Deneyin.");
 
 
 
