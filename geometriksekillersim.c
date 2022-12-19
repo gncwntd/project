@@ -70,7 +70,7 @@ int main()
         printf("Dorduncu Kenar:\n");
         scanf("%f",&q4);
 
-        printf("1.Acı:\n");
+        printf("1.Aci:\n");
         scanf("%f",&w1);
 
         printf("2.Aci:\n");
@@ -87,15 +87,15 @@ int main()
             printf("Alani:%f",((q1*q2*sin(w1))/2)+((q3*q4*sin(w3))/2));}
 
         else if ((q1 == q2 == q3 == q4) & (w1==90&w2==90&w3==90&w4==90)) {
-            printf("Sekliniz Kare!");
+            printf("Sekliniz Kare!\n");
             printf("Alani:%f",q1*q2);}
 
-        else if (((w1 == w3) & (w2 == w4))) {
-            printf("Sekliniz Paralel Kenar!");
+        else if ((q1 != q2 != q3 != q4) & ((w1 == w3) & (w2 == w4))) {
+            printf("Sekliniz Paralel Kenar!\n");
             printf("Alani:%f",((q1*q2*sin(w1))/2)+((q3*q4*sin(w3))/2));}
 
         else{
-            printf("Sekliniz Cesitkenar Dortgen!");
+            printf("Sekliniz Cesitkenar Dortgen!\n");
             printf("Alani:%f",((q1*q2*sin(w1))/2)+((q3*q4*sin(w3))/2));}
     }
 
@@ -113,7 +113,7 @@ int main()
 
     else if(sayi==5)
         printf("Yine Bekleriz!");
-    
+
     else
         printf("Gecersiz Islem! Lutfen Tekrar Deneyin.");
 
@@ -123,4 +123,5 @@ int main()
 
 return 0;
 }
+
 
