@@ -17,7 +17,8 @@ void kenarsayisi()
         i++;
         ct++;
     }
-    printf("Sekliniz %d'gendir!\n",ct);
+    printf("Sekliniz %d'gendir!\n\n",ct);
+    printf("Ana sayfaya yonlendiriliyorsunuz...\n\n");
 }
 
 int main()
@@ -100,20 +101,25 @@ int main()
 
             if ((q1 == q2 == q3 == q4) & ((w1 == w3) & (w2 == w4) & ((w1 != w4) & (w2 != w3)))) {
                 printf("Sekliniz Eskenar Dortgen!\n");
-                printf("Alani:%f\n", ((q1 * q2 * sin(w1)) / 2) + ((q3 * q4 * sin(w3)) / 2));
+                printf("Alani:%f\n\n", ((q1 * q2 * sin(w1)) / 2) + ((q3 * q4 * sin(w3)) / 2));
+                printf("Ana sayfaya yonlendiriliyorsunuz...\n\n");
             } else if (((q1 != q2) & (q3 != q4)) & ((q1 == q3) & (q2 == q4)) &
                        (w1 == 90 & w2 == 90 & w3 == 90 & w4 == 90)) {
                 printf("Sekliniz Dikdortgen!\n");
-                printf("Alani:%f\n", q1 * q2);
+                printf("Alani:%f\n\n", q1 * q2);
+                printf("Ana sayfaya yonlendiriliyorsunuz...\n\n");
             } else if ((q1 == q2 == q3 == q4) & (w1 == 90 & w2 == 90 & w3 == 90 & w4 == 90)) {
                 printf("Sekliniz Kare!\n");
-                printf("Alani:%f\n", q1 * q2);
+                printf("Alani:%f\n\n", q1 * q2);
+                printf("Ana sayfaya yonlendiriliyorsunuz...\n\n");
             } else if ((q1 != q2 != q3 != q4) & ((w1 == w3) & (w2 == w4))) {
                 printf("Sekliniz Paralel Kenar!\n");
-                printf("Alani:%f\n", ((q1 * q2 * sin(w1)) / 2) + ((q3 * q4 * sin(w3)) / 2));
+                printf("Alani:%f\n\n", ((q1 * q2 * sin(w1)) / 2) + ((q3 * q4 * sin(w3)) / 2));
+                printf("Ana sayfaya yonlendiriliyorsunuz...\n\n");
             } else {
                 printf("Sekliniz Cesitkenar Dortgen!\n");
-                printf("Alani:%f\n", ((q1 * q2 * sin(w1)) / 2) + ((q3 * q4 * sin(w3)) / 2));
+                printf("Alani:%f\n\n", ((q1 * q2 * sin(w1)) / 2) + ((q3 * q4 * sin(w3)) / 2));
+                printf("Ana sayfaya yonlendiriliyorsunuz...\n\n");
             }
         } else if (sayi == 3) {
             kenarsayisi();
@@ -122,9 +128,11 @@ int main()
             scanf("%f", &r);
             printf("Dairenin Cevresi:%.2f\n", 2 * PI * r);
             printf("Dairenin Alani:%.2f\n", PI * r * r);
+            printf("Ana sayfaya yonlendiriliyorsunuz...\n");
 
-        } else if (sayi == 5)
+        } else if (sayi == 5){
             printf("Yine Bekleriz!\n");
+            break;}
 
         else
             printf("Gecersiz Islem! Lutfen Tekrar Deneyin.\n");
@@ -135,3 +143,4 @@ int main()
 
 return 0;
 }
+
