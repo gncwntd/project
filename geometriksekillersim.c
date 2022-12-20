@@ -5,7 +5,7 @@
 void kenarsayisi()
 {
     int a;
-    printf("Lutfen Kenarlari Giriniz:");
+    printf("Lutfen Kenarlari Giriniz:\n(Bitirmek icin '-1' e basiniz)\n");
     scanf("%d",&a);
     printf("1. kenar %d\n",a);
     int i=2;
@@ -29,8 +29,8 @@ int main()
 
     printf("\nGEOMETRIK SEKILLERI TANIMA SIMULASYONU\n\n1.UCGEN\n2.DORTGEN\n3.COKGEN\n4.DAIRE\n5.CIKIS\n\n");
     while(1) {
-    printf("LUTFEN ISLEM NUMARASI GIRINIZ:");
-    scanf("%d",&sayi);
+        printf("LUTFEN ISLEM NUMARASI GIRINIZ:\n");
+        scanf("%d",&sayi);
 
 
         if (sayi == 1) {
@@ -55,10 +55,6 @@ int main()
             scanf("%f", &m);
 
             if (fabsf(x - y) < z <= x + y && fabsf(x - z) < y <= x + z && fabsf(y - z) < x <= y + z) {
-                if ((x != y) && (x != z) && (y != z)) {
-                    printf("Cesitkenar Ucgen");
-                }
-
                 if ((x == y) && (y == z) && (x == z)) {
                     printf("Eskenar Ucgen");
                 }
@@ -67,10 +63,12 @@ int main()
                     ((y == z) && (y != x) && (z != x))) {
                     if ((k == 90 & l == m) || (m == 90 & k == l) || (l == 90 & k == m))
                         printf(" ıkızkenar dık ucgen");
-                    else
+                } else
                     printf("ıkızkenar ucgen");
-                } 
-                
+                if ((x != y) && (x != z) && (y != z)) {
+                    printf("Cesitkenar Ucgen");
+                }
+
             } else {
                 printf("Ucgen Belirtmez.");
             }
@@ -129,8 +127,8 @@ int main()
             printf("Lutfen Yaricapi Giriniz:\n");
             scanf("%f", &r);
             printf("Dairenin Cevresi:%.2f\n", 2 * PI * r);
-            printf("Dairenin Alani:%.2f\n", PI * r * r);
-            printf("Ana sayfaya yonlendiriliyorsunuz...\n");
+            printf("Dairenin Alani:%.2f\n\n", PI * r * r);
+            printf("Ana sayfaya yonlendiriliyorsunuz...\n\n");
 
         } else if (sayi == 5){
             printf("Yine Bekleriz!\n");
@@ -143,6 +141,7 @@ int main()
 
 
 
-return 0;
+    return 0;
 }
+
 
