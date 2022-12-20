@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#define PI 3.14
+#define PI 3.14159265
 //   (((x+y+z)/2)*(((x+y+z)/2)-x)*(((x+y+z)/2)-y)*(((x+y+z)/2)-z))*
 void kenarsayisi()
 {
