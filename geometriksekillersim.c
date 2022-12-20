@@ -26,6 +26,7 @@ int main()
     float x,y,z,k,l,m;
     int sayi;
     float q1,q2,q3,q4,w1,w2,w3,w4,r;
+    float ucgen_alani;
 
     printf("\nGEOMETRIK SEKILLERI TANIMA SIMULASYONU\n\n1.UCGEN\n2.DORTGEN\n3.COKGEN\n4.DAIRE\n5.CIKIS\n\n");
     while(1) {
@@ -33,46 +34,88 @@ int main()
         scanf("%d",&sayi);
 
 
-        if (sayi == 1) {
+         if (sayi == 1) {
             printf("LUTFEN KENAR VE ACILARI GIRINIZ:\n");
-
-            printf("Birinci Kenar:\n", x);
+            
+            printf("Birinci Kenar:\n");
             scanf("%f", &x);
-
-            printf("Ikinci kenar:\n", y);
+              
+            while(x<=0){  
+            printf ("Kenar degeri 0 veya 0'dan kucuk olamaz. Lutfen gecerli bir deger giriniz\n");
+            scanf("%f", &x);
+            }
+            
+           
+            printf("Ikinci kenar:\n");
             scanf("%f", &y);
-
-            printf("Ucuncu kenar:\n", z);
+            while(y<=0){
+            printf ("Kenar degeri 0 veya 0'dan kucuk olamaz. Lutfen gecerli bir deger giriniz\n");
+            scanf("%f", &y);
+            }
+            
+            printf("Ucuncu kenar:\n");
             scanf("%f", &z);
+            while(z<=0){
+            printf ("Kenar degeri 0 veya 0'dan kucuk olamaz. Lutfen gecerli bir deger giriniz\n");
+            scanf("%f", &z);
+            } 
+            while (x>z+y || y>x+z || z>x+y || x<fabsf(y-z)  || y<fabsf(x-z) || z<fabsf(x-y) ){
+            printf ("Girilen degerler ucgen esitsizligine uymadigi icin bir ucgen olusturmaz. Tekrar deneyiniz.\n");
+            printf("Birinci Kenar:\n");
+            scanf("%f", &x);
+              
+            while(x<=0){  
+            printf ("Kenar degeri 0 veya 0'dan kucuk olamaz. Lutfen gecerli bir deger giriniz\n");
+            scanf("%f", &x);
+            }
+            
+           
+            printf("Ikinci kenar:\n");
+            scanf("%f", &y);
+            while(y<=0){
+            printf ("Kenar degeri 0 veya 0'dan kucuk olamaz. Lutfen gecerli bir deger giriniz\n");
+            scanf("%f", &y);
+            }
+            
+            printf("Ucuncu kenar:\n");
+            scanf("%f", &z);
+            while(z<=0){
+            printf ("Kenar degeri 0 veya 0'dan kucuk olamaz. Lutfen gecerli bir deger giriniz\n");
+            scanf("%f", &z);
+            } 
+            }
+            k=acos ((x*x+y*y-z*z)/(2*x*y))*180/PI;
+            
+            m= acos((x*x+z*z-y*y)/(2*x*z))*180/PI;
+            l=180-(k+m);
+            
+           printf("1. ve 2.kenar arasindaki aci:%f\n2. ve 3.kenar arsindaki aci:%f\n3. ve 1.kenar arasindaki aci:%f\n",k,l,m);
+            ucgen_alani= 0.5*x*y*sin(k* PI/180);
+            printf("Ucgenin alani:%f\n",ucgen_alani);
+           
+        
 
-            printf("1.Aci:\n", k);
-            scanf("%f", &k);
+            
+                
+                if ((x != y) && (x != z) && (y != z)) {
+                    printf("Bu ucgen bir cesitkenar ucgendir\n");
+                }
 
-            printf("2.Aci:\n", l);
-            scanf("%f", &l);
-
-            printf("3.Aci:\n", m);
-            scanf("%f", &m);
-
-            if (fabsf(x - y) < z <= x + y && fabsf(x - z) < y <= x + z && fabsf(y - z) < x <= y + z) {
-                if ((x == y) && (y == z) && (x == z)) {
-                    printf("Eskenar Ucgen");
+                else if ((x == y) && (y == z) && (x == z)) {
+                    printf("Bu ucgen bir eskenar ucgendir\n");
                 }
                 //printf("Alanı:%f",);
-                if (((x == y) && (x != z) && (y != z)) || ((x == z) && (x != y) && (z != y)) ||
+                else if (((x == y) && (x != z) && (y != z)) || ((x == z) && (x != y) && (z != y)) ||
                     ((y == z) && (y != x) && (z != x))) {
-                    if ((k == 90 & l == m) || (m == 90 & k == l) || (l == 90 & k == m))
-                        printf(" ıkızkenar dık ucgen");
-                } else
-                    printf("ıkızkenar ucgen");
-                if ((x != y) && (x != z) && (y != z)) {
-                    printf("Cesitkenar Ucgen");
-                }
-
-            } else {
-                printf("Ucgen Belirtmez.");
-            }
-        } else if (sayi == 2) {
+                    printf("Bu ucgen bir ıkızkenar ucgendir\n");
+                } 
+                if(x*x+y*y==z*z||x*x+z*z==y*y||y*y+z*z==x*x)
+         printf("Bu ucgen ayni zamanda bir dik ucgendir.\n");
+                
+             
+            
+        } 
+        else if (sayi == 2) {
             printf("LUTFEN KENAR VE ACILARI GIRINIZ:\n ");
 
             printf("Birinci Kenar:\n");
