@@ -55,6 +55,10 @@ int main()
             scanf("%f", &m);
 
             if (fabsf(x - y) < z <= x + y && fabsf(x - z) < y <= x + z && fabsf(y - z) < x <= y + z) {
+                if ((x != y) && (x != z) && (y != z)) {
+                    printf("Cesitkenar Ucgen");
+                }
+
                 if ((x == y) && (y == z) && (x == z)) {
                     printf("Eskenar Ucgen");
                 }
@@ -63,12 +67,10 @@ int main()
                     ((y == z) && (y != x) && (z != x))) {
                     if ((k == 90 & l == m) || (m == 90 & k == l) || (l == 90 & k == m))
                         printf(" ıkızkenar dık ucgen");
-                } else
+                    else
                     printf("ıkızkenar ucgen");
-                if ((x != y) && (x != z) && (y != z)) {
-                    printf("Cesitkenar Ucgen");
-                }
-
+                } 
+                
             } else {
                 printf("Ucgen Belirtmez.");
             }
